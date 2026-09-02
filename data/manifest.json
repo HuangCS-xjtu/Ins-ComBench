@@ -1,0 +1,16 @@
+{
+  "name": "insurance_compliance_benchmark",
+  "version": "1.0.0",
+  "language": "zh-CN",
+  "layer_counts": {
+    "layer1_basic_knowledge": 1100,
+    "layer2_cognitive_reasoning": 1200,
+    "layer3_case_analysis": 92,
+    "layer4_multiturn_attack": 90
+  },
+  "data_policy": {
+    "questions": "questions.jsonl is the only file passed to target models.",
+    "scoring_key": "scoring_key.jsonl is evaluator-only and may contain answers, legal references, and rubrics.",
+    "raw_sources": "Raw source materials and internal build artifacts are not distributed in the public release."
+  }
+}

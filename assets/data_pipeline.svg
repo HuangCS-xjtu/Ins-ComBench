@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1060" viewBox="0 0 1800 1060" role="img" aria-labelledby="title desc">
+  <title id="title">Ins-ComBench 数据构建与质量控制流程</title>
+  <desc id="desc">展示法规条款如何形成合规要点库，不同题型如何生成，以及样本如何经过人工复核、数据隔离、自动校验和版本发布。</desc>
+  <defs>
+    <style>
+      .title { font: 700 38px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .subtitle { font: 400 19px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .stage { font: 700 16px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #222222; }
+      .section { font: 700 22px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .box-title { font: 700 19px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .box-body { font: 400 15px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .lane-title { font: 700 18px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .lane-body { font: 400 14px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .small { font: 400 13px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #666666; }
+      .mono { font: 700 15px Consolas, monospace; fill: #263746; }
+      .arrow-green { fill: none; stroke: #659a47; stroke-width: 2.4; marker-end: url(#greenArrow); }
+      .arrow-blue { fill: none; stroke: #4f7fca; stroke-width: 2.4; marker-end: url(#blueArrow); }
+      .arrow-orange { fill: none; stroke: #ed7b2f; stroke-width: 2.4; marker-end: url(#orangeArrow); }
+      .arrow-purple { fill: none; stroke: #604ba8; stroke-width: 2.5; marker-end: url(#purpleArrow); }
+      .arrow-black { fill: none; stroke: #333333; stroke-width: 2.2; marker-end: url(#blackArrow); }
+      .feedback { fill: none; stroke: #9a7656; stroke-width: 2; stroke-dasharray: 8 7; marker-end: url(#feedbackArrow); }
+      .dash { fill: #ffffff; stroke: #292929; stroke-width: 1.8; stroke-dasharray: 8 6; }
+    </style>
+    <marker id="greenArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#659a47"/></marker>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#4f7fca"/></marker>
+    <marker id="orangeArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ed7b2f"/></marker>
+    <marker id="purpleArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#604ba8"/></marker>
+    <marker id="blackArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#333333"/></marker>
+    <marker id="feedbackArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9a7656"/></marker>
+  </defs>
+
+  <rect width="1800" height="1060" fill="#ffffff"/>
+  <text class="title" x="70" y="66">Ins-ComBench 数据构建与质量控制</text>
+  <text class="subtitle" x="70" y="102">从法规条款到合规要点，从原始素材到规范样本，从候选题目到可复现发布数据</text>
+
+  <!-- Stage 1: compliance knowledge base -->
+  <rect x="70" y="135" width="154" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="147" y="157" text-anchor="middle">01 合规底座构建</text>
+
+  <rect x="70" y="190" width="300" height="126" rx="2" fill="#f1f7ed" stroke="#659a47" stroke-width="2"/>
+  <text class="box-title" x="220" y="230" text-anchor="middle">监管法规原文</text>
+  <text class="box-body" x="220" y="263" text-anchor="middle">58 部规范 · 2,240 条去重条款</text>
+  <text class="small" x="220" y="291" text-anchor="middle">保留法规名称、条号与原文定位</text>
+
+  <rect class="dash" x="430" y="190" width="260" height="126" rx="2"/>
+  <text class="box-title" x="560" y="230" text-anchor="middle">条款筛选</text>
+  <text class="box-body" x="560" y="263" text-anchor="middle">去重 · 有效性核查</text>
+  <text class="small" x="560" y="291" text-anchor="middle">提取保险合规相关规则</text>
+
+  <rect class="dash" x="750" y="190" width="280" height="126" rx="2"/>
+  <text class="box-title" x="890" y="230" text-anchor="middle">语义结构化</text>
+  <text class="box-body" x="890" y="263" text-anchor="middle">主体 · 行为 · 监管目的</text>
+  <text class="small" x="890" y="291" text-anchor="middle">拆分原子规则并建立关联字段</text>
+
+  <rect class="dash" x="1090" y="190" width="260" height="126" rx="2"/>
+  <text class="box-title" x="1220" y="230" text-anchor="middle">归并与映射</text>
+  <text class="box-body" x="1220" y="263" text-anchor="middle">语义归并 · 领域标注</text>
+  <text class="small" x="1220" y="291" text-anchor="middle">保持要点与原始条款可追溯</text>
+
+  <rect x="1410" y="190" width="320" height="126" rx="2" fill="#eef3fb" stroke="#4f7fca" stroke-width="2"/>
+  <text class="box-title" x="1570" y="230" text-anchor="middle">统一合规要点库</text>
+  <text class="box-body" x="1570" y="263" text-anchor="middle">88 个要点 · 16 个一级领域</text>
+  <text class="small" x="1570" y="291" text-anchor="middle">四类样本共享的语义锚点</text>
+
+  <path class="arrow-green" d="M370 253H430"/>
+  <path class="arrow-green" d="M690 253H750"/>
+  <path class="arrow-green" d="M1030 253H1090"/>
+  <path class="arrow-green" d="M1350 253H1410"/>
+
+  <!-- Stage 2: task-specific construction -->
+  <rect x="70" y="352" width="136" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="138" y="374" text-anchor="middle">02 专项样本构建</text>
+
+  <rect x="70" y="405" width="1660" height="342" rx="2" fill="#fafafa" stroke="#292929" stroke-width="1.8" stroke-dasharray="8 6"/>
+  <text class="section" x="100" y="444">同一合规要点，不同任务采用不同构建工艺</text>
+
+  <!-- shared semantic rail -->
+  <path class="arrow-purple" d="M1570 316V370H1650V466H1588"/>
+  <line x1="1588" y1="466" x2="1588" y2="683" stroke="#604ba8" stroke-width="2.4"/>
+  <circle cx="1588" cy="493" r="5" fill="#604ba8"/>
+  <circle cx="1588" cy="578" r="5" fill="#604ba8"/>
+  <circle cx="1588" cy="663" r="5" fill="#604ba8"/>
+
+  <!-- L1/L2 construction lane -->
+  <circle cx="118" cy="493" r="23" fill="#f1f7ed" stroke="#659a47" stroke-width="2"/>
+  <text x="118" y="499" text-anchor="middle" style="font:700 14px Arial,sans-serif;fill:#527e38">L1/2</text>
+  <text class="lane-title" x="160" y="484">客观题与情境题</text>
+  <text class="lane-body" x="160" y="508">知识与推理类样本</text>
+
+  <rect class="dash" x="370" y="462" width="310" height="64" rx="2"/>
+  <text class="lane-title" x="525" y="489" text-anchor="middle">要点分层与原子命题提取</text>
+  <text class="lane-body" x="525" y="512" text-anchor="middle">A/B/C 重要性 · 平均 3.1 条命题</text>
+
+  <rect class="dash" x="755" y="462" width="320" height="64" rx="2"/>
+  <text class="lane-title" x="915" y="489" text-anchor="middle">命题与情景组合</text>
+  <text class="lane-body" x="915" y="512" text-anchor="middle">案例母本 · 情景骨架 · 条件约束</text>
+
+  <rect x="1150" y="462" width="350" height="64" rx="2" fill="#f1f7ed" stroke="#659a47" stroke-width="1.8"/>
+  <text class="lane-title" x="1325" y="489" text-anchor="middle">受约束变异与认知变换</text>
+  <text class="lane-body" x="1325" y="512" text-anchor="middle">干扰项生成 · 五类推断变换</text>
+
+  <path class="arrow-green" d="M680 494H755"/>
+  <path class="arrow-green" d="M1075 494H1150"/>
+  <path class="arrow-purple" d="M1588 493H1500"/>
+
+  <!-- L3 construction lane -->
+  <circle cx="118" cy="578" r="23" fill="#fff2e9" stroke="#ed7b2f" stroke-width="2"/>
+  <text x="118" y="584" text-anchor="middle" style="font:700 14px Arial,sans-serif;fill:#c96322">L3</text>
+  <text class="lane-title" x="160" y="569">案例分析题</text>
+  <text class="lane-body" x="160" y="593">真实裁判案例改造</text>
+
+  <rect class="dash" x="370" y="547" width="310" height="64" rx="2"/>
+  <text class="lane-title" x="525" y="574" text-anchor="middle">案例检索与完整性筛选</text>
+  <text class="lane-body" x="525" y="597" text-anchor="middle">保险类案由 · 剔除无裁判结果文书</text>
+
+  <rect class="dash" x="755" y="547" width="320" height="64" rx="2"/>
+  <text class="lane-title" x="915" y="574" text-anchor="middle">裁判文书五要素拆分</text>
+  <text class="lane-body" x="915" y="597" text-anchor="middle">案情 · 结果 · 要旨 · 理由 · 法条</text>
+
+  <rect x="1150" y="547" width="350" height="64" rx="2" fill="#fff2e9" stroke="#ed7b2f" stroke-width="1.8"/>
+  <text class="lane-title" x="1325" y="574" text-anchor="middle">答案结构与法条归一化</text>
+  <text class="lane-body" x="1325" y="597" text-anchor="middle">A1 法条 · A2 推理要点 · B 结论</text>
+
+  <path class="arrow-orange" d="M680 579H755"/>
+  <path class="arrow-orange" d="M1075 579H1150"/>
+  <path class="arrow-purple" d="M1588 578H1500"/>
+
+  <!-- L4 construction lane -->
+  <circle cx="118" cy="663" r="23" fill="#f2eff9" stroke="#6f58af" stroke-width="2"/>
+  <text x="118" y="669" text-anchor="middle" style="font:700 14px Arial,sans-serif;fill:#58438f">L4</text>
+  <text class="lane-title" x="160" y="654">多轮对抗题</text>
+  <text class="lane-body" x="160" y="678">围绕明确边界渐进施压</text>
+
+  <rect class="dash" x="370" y="632" width="310" height="64" rx="2"/>
+  <text class="lane-title" x="525" y="659" text-anchor="middle">边界与策略选择</text>
+  <text class="lane-body" x="525" y="682" text-anchor="middle">合规要点 · 八类攻击策略</text>
+
+  <rect class="dash" x="755" y="632" width="320" height="64" rx="2"/>
+  <text class="lane-title" x="915" y="659" text-anchor="middle">四轮诱导强度编排</text>
+  <text class="lane-body" x="915" y="682" text-anchor="middle">正常请求 → 业务压力 → 越界 → 压迫</text>
+
+  <rect x="1150" y="632" width="350" height="64" rx="2" fill="#f2eff9" stroke="#6f58af" stroke-width="1.8"/>
+  <text class="lane-title" x="1325" y="659" text-anchor="middle">评分边界与攻击标签</text>
+  <text class="lane-body" x="1325" y="682" text-anchor="middle">安全 Rubric · Hard/Soft ASR</text>
+
+  <path class="arrow-purple" d="M680 664H755"/>
+  <path class="arrow-purple" d="M1075 664H1150"/>
+  <path class="arrow-purple" d="M1588 663H1500"/>
+
+  <!-- Stage 3: QC and release -->
+  <rect x="70" y="783" width="172" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="156" y="805" text-anchor="middle">03 质检、隔离与发布</text>
+
+  <rect class="dash" x="70" y="845" width="280" height="124" rx="2"/>
+  <text class="box-title" x="210" y="881" text-anchor="middle">候选样本</text>
+  <text class="box-body" x="210" y="913" text-anchor="middle">题目 · 答案 · 依据 · 标签</text>
+  <text class="small" x="210" y="942" text-anchor="middle">保留来源与中间构建记录</text>
+
+  <rect x="420" y="845" width="330" height="124" rx="2" fill="#fff7ed" stroke="#c98950" stroke-width="1.8"/>
+  <text class="box-title" x="585" y="881" text-anchor="middle">双重质检</text>
+  <text class="box-body" x="585" y="913" text-anchor="middle">自动规则检查 + 人工逐条复核</text>
+  <text class="small" x="585" y="942" text-anchor="middle">正确性 · 有效性 · 难度 · 无争议</text>
+
+  <rect class="dash" x="820" y="845" width="310" height="124" rx="2"/>
+  <text class="box-title" x="975" y="881" text-anchor="middle">模型侧 / 评估侧隔离</text>
+  <text class="mono" x="975" y="914" text-anchor="middle">questions.jsonl</text>
+  <text class="mono" x="975" y="942" text-anchor="middle">scoring_key.jsonl</text>
+
+  <rect class="dash" x="1200" y="845" width="260" height="124" rx="2"/>
+  <text class="box-title" x="1330" y="881" text-anchor="middle">发布前自动校验</text>
+  <text class="box-body" x="1330" y="913" text-anchor="middle">数量 · ID · 字段 · 配对</text>
+  <text class="small" x="1330" y="942" text-anchor="middle">防泄漏 · manifest 完整性</text>
+
+  <rect x="1530" y="845" width="200" height="124" rx="2" fill="#e8f0f7" stroke="#6687a6" stroke-width="1.8"/>
+  <text class="box-title" x="1630" y="881" text-anchor="middle">版本化发布</text>
+  <text class="box-body" x="1630" y="913" text-anchor="middle">Canonical JSONL</text>
+  <text class="small" x="1630" y="942" text-anchor="middle">可追溯 · 可审计 · 可复现</text>
+
+  <path class="arrow-black" d="M900 747V785H210V845"/>
+  <path class="arrow-black" d="M350 907H420"/>
+  <path class="arrow-black" d="M750 907H820"/>
+  <path class="arrow-black" d="M1130 907H1200"/>
+  <path class="arrow-blue" d="M1460 907H1530"/>
+
+  <!-- revision loop -->
+  <path class="feedback" d="M585 845V813H330V747"/>
+  <rect x="375" y="785" width="194" height="28" rx="2" fill="#ffffff"/>
+  <text class="small" x="472" y="804" text-anchor="middle">不通过：退回修订或剔除</text>
+
+  <text class="small" x="900" y="1021" text-anchor="middle">构建脚本保留中间记录；校验脚本阻止数量异常、字段缺失、ID 冲突与评分信息泄漏进入发布版本</text>
+</svg>

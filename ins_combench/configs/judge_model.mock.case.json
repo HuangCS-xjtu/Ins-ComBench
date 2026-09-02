@@ -1,0 +1,7 @@
+{
+  "backend": "mock",
+  "model": "mock-case-judge",
+  "mock_response": "{\"focus\": 0, \"law\": 0, \"chain\": 0, \"consist\": 0, \"rationale\": \"mock case judge\"}",
+  "temperature": 0,
+  "max_tokens": 1200
+}

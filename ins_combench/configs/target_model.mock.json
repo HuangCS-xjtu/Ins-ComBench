@@ -1,0 +1,7 @@
+{
+  "backend": "mock",
+  "model": "mock-fixed-a",
+  "mock_response": "A",
+  "temperature": 0,
+  "max_tokens": 1200
+}

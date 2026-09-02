@@ -1,0 +1,24 @@
+[project]
+name = "insurance-compliance-benchmark"
+version = "1.0.0"
+description = "Four-layer insurance compliance benchmark for LLM evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+]
+
+[project.scripts]
+ins-combench = "ins_combench.cli:main"
+
+[project.urls]
+Repository = "https://github.com/HuangCS-xjtu/Ins-ComBench"
+Issues = "https://github.com/HuangCS-xjtu/Ins-ComBench/issues"
+
+[tool.setuptools.packages.find]
+include = ["ins_combench*"]
+
+[tool.setuptools.package-data]
+"ins_combench" = ["configs/*.json"]
+"ins_combench.case_analysis" = ["prompts/*.md"]
+"ins_combench.multiturn_attack" = ["prompts/*.md"]

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="960" viewBox="0 0 1800 960" role="img" aria-labelledby="title desc">
+  <title id="title">Ins-ComBench 四层合规能力评测体系</title>
+  <desc id="desc">展示统一合规语义底座之上的四层能力递进、各层样本、评价重点、综合权重以及评测结果的应用场景。</desc>
+  <defs>
+    <style>
+      .title { font: 700 40px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .subtitle { font: 400 19px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .stage { font: 700 16px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #222222; }
+      .anchor-title { font: 700 22px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .anchor-body { font: 400 15px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .layer-code { font: 700 15px Arial, sans-serif; }
+      .ability { font: 700 25px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .layer-name { font: 700 19px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #333333; }
+      .metric { font: 400 15px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .method { font: 700 15px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #333333; }
+      .weight { font: 700 18px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
+      .axis { font: 400 15px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .score-title { font: 700 21px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .score-formula { font: 700 20px Consolas, "Microsoft YaHei", sans-serif; fill: #263746; }
+      .score-note { font: 400 14px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #666666; }
+      .app-title { font: 700 19px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #171717; }
+      .app-body { font: 400 14px "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #555555; }
+      .arrow { fill: none; stroke: #604ba8; stroke-width: 2.6; marker-end: url(#arrow); }
+      .down { fill: none; stroke: #333333; stroke-width: 2.2; marker-end: url(#blackArrow); }
+      .dash { stroke: #292929; stroke-width: 1.8; stroke-dasharray: 8 6; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#604ba8"/></marker>
+    <marker id="blackArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#333333"/></marker>
+  </defs>
+
+  <rect width="1800" height="960" fill="#ffffff"/>
+
+  <text class="title" x="70" y="66">Ins-ComBench 四层合规能力评测体系</text>
+  <text class="subtitle" x="70" y="103">以统一合规语义为基准，沿“知道、理解、运用、坚持”逐层提高任务开放度与业务压力</text>
+
+  <!-- Shared anchor -->
+  <rect x="70" y="137" width="122" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="131" y="159" text-anchor="middle">01 共同基准</text>
+
+  <rect x="300" y="143" width="1200" height="92" rx="2" fill="#f4f4f4" class="dash"/>
+  <text class="anchor-title" x="900" y="180" text-anchor="middle">统一保险合规要点体系</text>
+  <text class="anchor-body" x="900" y="211" text-anchor="middle">88 个合规要点 · 16 个一级领域 · 四层共享同一语义锚点与法规追溯关系</text>
+
+  <path class="down" d="M900 235V278"/>
+
+  <!-- Four-layer progression -->
+  <rect x="70" y="263" width="136" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="138" y="285" text-anchor="middle">02 能力递进</text>
+
+  <!-- L1 -->
+  <rect x="70" y="315" width="360" height="264" rx="2" fill="#f1f7ed" stroke="#659a47" stroke-width="2"/>
+  <circle cx="112" cy="355" r="23" fill="#ffffff" stroke="#659a47" stroke-width="2"/>
+  <text class="layer-code" x="112" y="361" text-anchor="middle" fill="#527e38">L1</text>
+  <text class="ability" x="152" y="363">知道规则</text>
+  <line x1="100" y1="388" x2="400" y2="388" stroke="#b8cfaa" stroke-width="1.5"/>
+  <text class="layer-name" x="100" y="425">基础知识</text>
+  <text class="metric" x="100" y="459">1,100 题 · 单选 880 / 多选 220</text>
+  <text class="metric" x="100" y="491">规则记忆与基础理解</text>
+  <text class="method" x="100" y="523">严格集合匹配</text>
+  <text class="weight" x="100" y="558" fill="#527e38">综合权重 15%</text>
+
+  <!-- L2 -->
+  <rect x="503" y="315" width="360" height="264" rx="2" fill="#eef3fb" stroke="#4f7fca" stroke-width="2"/>
+  <circle cx="545" cy="355" r="23" fill="#ffffff" stroke="#4f7fca" stroke-width="2"/>
+  <text class="layer-code" x="545" y="361" text-anchor="middle" fill="#426cae">L2</text>
+  <text class="ability" x="585" y="363">理解规则</text>
+  <line x1="533" y1="388" x2="833" y2="388" stroke="#bdcdea" stroke-width="1.5"/>
+  <text class="layer-name" x="533" y="425">认知推理</text>
+  <text class="metric" x="533" y="459">1,200 题 · 单选 960 / 多选 240</text>
+  <text class="metric" x="533" y="491">边界识别与情境推断</text>
+  <text class="method" x="533" y="523">严格集合匹配</text>
+  <text class="weight" x="533" y="558" fill="#426cae">综合权重 20%</text>
+
+  <!-- L3 -->
+  <rect x="937" y="315" width="360" height="264" rx="2" fill="#fff2e9" stroke="#ed7b2f" stroke-width="2"/>
+  <circle cx="979" cy="355" r="23" fill="#ffffff" stroke="#ed7b2f" stroke-width="2"/>
+  <text class="layer-code" x="979" y="361" text-anchor="middle" fill="#c96322">L3</text>
+  <text class="ability" x="1019" y="363">运用规则</text>
+  <line x1="967" y1="388" x2="1267" y2="388" stroke="#f0c4a6" stroke-width="1.5"/>
+  <text class="layer-name" x="967" y="425">案例分析</text>
+  <text class="metric" x="967" y="459">92 题 · 开放式案例</text>
+  <text class="metric" x="967" y="491">结论、法条援引与论证</text>
+  <text class="method" x="967" y="523">规则评分 + LLM Judge</text>
+  <text class="weight" x="967" y="558" fill="#c96322">综合权重 30%</text>
+
+  <!-- L4 -->
+  <rect x="1370" y="315" width="360" height="264" rx="2" fill="#f2eff9" stroke="#6f58af" stroke-width="2"/>
+  <circle cx="1412" cy="355" r="23" fill="#ffffff" stroke="#6f58af" stroke-width="2"/>
+  <text class="layer-code" x="1412" y="361" text-anchor="middle" fill="#58438f">L4</text>
+  <text class="ability" x="1452" y="363">坚持规则</text>
+  <line x1="1400" y1="388" x2="1700" y2="388" stroke="#cfc6e5" stroke-width="1.5"/>
+  <text class="layer-name" x="1400" y="425">多轮对抗</text>
+  <text class="metric" x="1400" y="459">90 组 · 每组 4 轮对话</text>
+  <text class="metric" x="1400" y="491">连续诱导下的合规稳健性</text>
+  <text class="method" x="1400" y="523">LLM Judge + Hard/Soft ASR</text>
+  <text class="weight" x="1400" y="558" fill="#58438f">综合权重 35%</text>
+
+  <path class="arrow" d="M430 447H503"/>
+  <path class="arrow" d="M863 447H937"/>
+  <path class="arrow" d="M1297 447H1370"/>
+
+  <!-- progression axis -->
+  <line x1="110" y1="618" x2="1690" y2="618" stroke="#604ba8" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="250" cy="618" r="5" fill="#659a47"/>
+  <circle cx="683" cy="618" r="5" fill="#4f7fca"/>
+  <circle cx="1117" cy="618" r="5" fill="#ed7b2f"/>
+  <circle cx="1550" cy="618" r="5" fill="#6f58af"/>
+  <text class="axis" x="250" y="648" text-anchor="middle">规则知识</text>
+  <text class="axis" x="683" y="648" text-anchor="middle">情境判断</text>
+  <text class="axis" x="1117" y="648" text-anchor="middle">开放论证</text>
+  <text class="axis" x="1550" y="648" text-anchor="middle">多轮交互</text>
+  <text class="axis" x="900" y="680" text-anchor="middle">任务开放度、推理复杂度与业务压力逐层提高</text>
+
+  <path class="down" d="M900 688V721"/>
+
+  <!-- Score aggregation -->
+  <rect x="70" y="706" width="122" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="131" y="728" text-anchor="middle">03 综合输出</text>
+
+  <rect x="250" y="725" width="1300" height="96" rx="2" fill="#fff4cf" stroke="#d2ae58" stroke-width="1.8"/>
+  <text class="score-title" x="900" y="759" text-anchor="middle">0-100 保险合规综合得分</text>
+  <text class="score-formula" x="900" y="789" text-anchor="middle">Overall = 0.15×L1 + 0.20×L2 + 0.30×L3 + 0.35×L4</text>
+  <text class="score-note" x="900" y="812" text-anchor="middle">各层先归一化至 0-100；只有四层数据完整的全量运行生成正式综合分</text>
+
+  <path class="down" d="M900 821V850"/>
+
+  <!-- Applications -->
+  <rect x="70" y="840" width="122" height="31" rx="3" fill="#eeeeee" stroke="#bdbdbd"/>
+  <text class="stage" x="131" y="862" text-anchor="middle">04 结果应用</text>
+
+  <rect x="250" y="858" width="390" height="74" rx="2" fill="#eef3fb" stroke="#4f7fca" stroke-width="1.6"/>
+  <text class="app-title" x="445" y="887" text-anchor="middle">模型准入与选型</text>
+  <text class="app-body" x="445" y="914" text-anchor="middle">横向比较候选模型的合规能力结构</text>
+
+  <rect x="705" y="858" width="390" height="74" rx="2" fill="#f1f7ed" stroke="#659a47" stroke-width="1.6"/>
+  <text class="app-title" x="900" y="887" text-anchor="middle">上线前合规把关</text>
+  <text class="app-body" x="900" y="914" text-anchor="middle">识别高风险场景与薄弱能力层级</text>
+
+  <rect x="1160" y="858" width="390" height="74" rx="2" fill="#f2eff9" stroke="#6f58af" stroke-width="1.6"/>
+  <text class="app-title" x="1355" y="887" text-anchor="middle">持续监测与版本复测</text>
+  <text class="app-body" x="1355" y="914" text-anchor="middle">跟踪模型、策略和数据版本变化</text>
+</svg>
